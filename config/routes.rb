@@ -6,6 +6,7 @@ HelloConektaRubyRails::Application.routes.draw do
 
   get '/products/:id/buy', to: 'products#buy', as: 'buy_product'
   get '/products/:id/subscription', to: 'products#subscription', as: 'subscription_product'
+  post '/charges/subscription', to: 'charges#subscription', as: 'create_subscription'
   resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.
